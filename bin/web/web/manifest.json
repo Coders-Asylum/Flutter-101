@@ -1,6 +1,6 @@
 {
-    "name": "web",
-    "short_name": "web",
+    "name": "Coders Asylum's- Flutter 101",
+    "short_name": "Flutter-101",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
