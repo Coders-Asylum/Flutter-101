@@ -55,3 +55,6 @@ flutter:
         - asset: lib/assets/fonts/SourceCodePro-Regular.ttf
         - asset: lib/assets/fonts/SourceCodePro-SemiBold.ttf
           weight: 300
+    - family: Source Sans
+      fonts:
+        - asset: lib/assets/SourceSansPro-Regular.ttf
