@@ -13,9 +13,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter 101',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Color(0xffD3D3D3),
+        highlightColor: Color(0xff727272),
+        accentColor: Color(0xff1366C8),
+        backgroundColor: Color(0xff1E1E1E),
       ),
-      home: HomePage(title: 'Flutter Demo Home Page'),
+      home: HomePage(),
     );
   }
 }
