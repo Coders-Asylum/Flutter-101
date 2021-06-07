@@ -10,7 +10,7 @@ class _CircleMatrixState extends State<CircleMatrix> {
   static const int _rows = 6;
 
   /// No. of Columns of Circles.
-  static const int _columns = 4;
+  static const int _columns = 6;
 
   /// This is the spacing around each each circle.
   ///
