@@ -2,25 +2,40 @@ import 'dart:math' show Random;
 import 'dart:ui' as ui show Gradient;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart' show ScrollDirection;
 
 /// Creates connected line pattern that changes position in time, creating a futuristic tech pattern effect.
 class TechnologicalLinesAnimation extends StatefulWidget {
+  /// Scales the widget to the specified value, default is 1.
   final double scale;
 
-  const TechnologicalLinesAnimation({Key? key, this.scale = 1}) : super(key: key);
+  /// ScrollDirection to trigger the animation.
+  final ScrollDirection scrollDirection;
+
+  const TechnologicalLinesAnimation({Key? key, this.scale = 1, required this.scrollDirection}) : super(key: key);
 
   _TechnologicalLinesAnimationState createState() => _TechnologicalLinesAnimationState();
 }
 
 class _TechnologicalLinesAnimationState extends State<TechnologicalLinesAnimation> with TickerProviderStateMixin {
+  /// Animation Controller for different nodes.
   late final AnimationController _lineAnimationController1;
   late final AnimationController _lineAnimationController2;
   late final AnimationController _lineAnimationController3;
+
+  /// Animation Controller to change the size of circle.
   late final AnimationController _circleRadAnimationController;
 
+  /// Position change type 1.
   late Animation<double> _posOff1;
+
+  /// Position change of type 2.
   late Animation<double> _posOff2;
+
+  /// Position change of type 3.
   late Animation<double> _posOff3;
+
+  /// Change of circle radius.
   late Animation<double> _radTranslate;
 
   @override
@@ -174,7 +189,9 @@ class _TechLinesPainter extends CustomPainter {
 
     //level1 ---> level2
     _segment(canvas, _points[1][0], _points[2][0]);
+    _segment(canvas, _points[1][1], _points[2][0]);
     _segment(canvas, _points[1][1], _points[2][1]);
+    _segment(canvas, _points[1][2], _points[2][1]);
     _segment(canvas, _points[1][2], _points[2][2]);
     _segment(canvas, _points[1][3], _points[2][2]);
 
