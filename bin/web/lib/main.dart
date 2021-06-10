@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
         highlightColor: Color(0xff727272),
         accentColor: Color(0xff1366C8),
         backgroundColor: Color(0xff1E1E1E),
+        shadowColor: Color(0xff000000),
       ),
       home: HomePage(),
     );
